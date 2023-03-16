@@ -8,6 +8,7 @@ import Blog from "./Blog";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useGlobalContext } from "./Context";
 import Footer from "./Footer";
+import Sidebar from "./Sidebar";
 
 function App() {
   const { isLoading } = useGlobalContext();
@@ -18,6 +19,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Sidebar />
       <Button />
       <Routes>
         <Route path="/" element={<MenuList />} />

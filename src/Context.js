@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useReducer } from "react";
 import reducer from "./reducer";
 import paginate from "./paginate";
-import pastry from "./pastry";
-import sweets from "./sweets";
-import soups from "./soups";
+
+import pastry from "./data/pastry";
+import sweets from "./data/sweets";
+import soups from "./data/soups";
 
 const AppContext = React.createContext();
 
@@ -42,7 +43,15 @@ const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ ...state, changeQuery, increaseFunc, decreaseFunc }}
+      value={{
+        ...state,
+        changeQuery,
+        increaseFunc,
+        decreaseFunc,
+        pastry,
+        sweets,
+        soups,
+      }}
     >
       {children}
     </AppContext.Provider>
