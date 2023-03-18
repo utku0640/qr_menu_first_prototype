@@ -13,7 +13,7 @@ function Navbar() {
             <Link to="/">Anasayfa</Link>
           </li>
           <li>
-            <Link to="/contact">İletişim</Link>
+            <Link to="/menu">İletişim</Link>
           </li>
           <li>
             <Link to="/blog">Blog</Link>

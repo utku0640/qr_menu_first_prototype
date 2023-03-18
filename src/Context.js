@@ -36,6 +36,28 @@ const AppProvider = ({ children }) => {
   const decreaseFunc = () => {
     dispatch({ type: "DEC", payload: state.data.length });
   };
+  const according_to_query_render_heading = () => {
+    if (state.query === pastry) {
+      return <h1>Hamur İşi</h1>;
+    }
+    if (state.query === sweets) {
+      return <h1>Tatlılar</h1>;
+    }
+    if (state.query === soups) {
+      return <h1>Çorbalar</h1>;
+    }
+  };
+  const according_to_query_render_heading2 = () => {
+    if (state.query === pastry) {
+      return "pastry";
+    }
+    if (state.query === sweets) {
+      return "sweets";
+    }
+    if (state.query === soups) {
+      return "soups";
+    }
+  };
 
   useEffect(() => {
     fetchData(state.query);
@@ -51,6 +73,8 @@ const AppProvider = ({ children }) => {
         pastry,
         sweets,
         soups,
+        according_to_query_render_heading,
+        according_to_query_render_heading2,
       }}
     >
       {children}

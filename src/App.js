@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import MenuList from "./MenuList";
-import Button from "./Button";
 import Navbar from "./Navbar";
-import Contact from "./Contact";
+import Menu from "./Menu";
 import Blog from "./Blog";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useGlobalContext } from "./Context";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
+import QrCode from "./QrCode";
 
 function App() {
   const { isLoading } = useGlobalContext();
@@ -20,11 +20,11 @@ function App() {
     <>
       <Navbar />
       <Sidebar />
-      <Button />
       <Routes>
-        <Route path="/" element={<MenuList />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="/" element={<Menu />} />
+        <Route path="menulist" element={<MenuList />} />
         <Route path="blog" element={<Blog />} />
+        <Route path="qrCode" element={<QrCode />} />
       </Routes>
       <Footer />
     </>

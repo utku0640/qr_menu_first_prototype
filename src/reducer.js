@@ -22,7 +22,7 @@ function reducer(state, action) {
     case "DEC":
       let tempPag = state.page - 1;
       if (tempPag < 0) {
-        return { ...state, page: action.payload - 1 };
+        return { ...state };
       } else {
         return { ...state, page: tempPag };
       }
