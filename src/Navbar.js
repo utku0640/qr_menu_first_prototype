@@ -16,7 +16,7 @@ function Navbar() {
             <Link to="/menu">İletişim</Link>
           </li>
           <li>
-            <Link to="/blog">Blog</Link>
+            <Link to="/map">Harita</Link>
           </li>
         </ul>
       </div>

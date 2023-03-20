@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "./logo.png";
 import { VscListUnordered } from "react-icons/vsc";
-import { HiOutlinePhoneIncoming } from "react-icons/hi";
-import { ImBlog } from "react-icons/im";
+import { SiWelcometothejungle } from "react-icons/si";
 import { FaBattleNet } from "react-icons/fa";
 import { MdProductionQuantityLimits } from "react-icons/md";
-import { FiLogIn } from "react-icons/fi";
+import { BiMap } from "react-icons/bi";
+import { BsQrCodeScan } from "react-icons/bs";
 
 function Sidebar() {
   const [toggle, setToggle] = useState(true);
@@ -46,18 +46,10 @@ function Sidebar() {
           </a>
           <a>
             <li>
-              <HiOutlinePhoneIncoming className="icon" />
+              <SiWelcometothejungle className="icon" />
 
-              <Link onClick={() => setToggle(true)} to="/menuList">
-                İletişim
-              </Link>
-            </li>
-          </a>
-          <a>
-            <li>
-              <ImBlog className="icon" />
-              <Link onClick={() => setToggle(true)} to="/blog">
-                Blog
+              <Link onClick={() => setToggle(true)} to="/firstPage">
+                Hoşgeldin Sayfası
               </Link>
             </li>
           </a>
@@ -71,7 +63,15 @@ function Sidebar() {
           </a>
           <a>
             <li>
-              <FiLogIn className="icon" />
+              <BiMap className="icon" />
+              <Link onClick={() => setToggle(true)} to="/map">
+                Harita
+              </Link>
+            </li>
+          </a>
+          <a>
+            <li>
+              <BsQrCodeScan className="icon" />
               <Link onClick={() => setToggle(true)} to="/qrCode">
                 Qr Code
               </Link>
